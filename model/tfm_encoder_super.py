@@ -87,6 +87,9 @@ class TransformerEncoderLayer(nn.Module):
 
 
     def get_complexity(self, sequence_length):
+        if self.is_identity_layer:
+            return 0.0
+
         total_flops = 0
 
         total_flops += self.norm1.get_complexity(sequence_length)
@@ -98,6 +101,9 @@ class TransformerEncoderLayer(nn.Module):
 
 
     def forward(self, x, H, W):
+        if self.is_identity_layer:
+            return x
+
         x = x + self.attn(self.norm1(x), H, W)
         x = x + self.mlp(self.norm2(x), H, W)
 
