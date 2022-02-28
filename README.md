@@ -1,15 +1,16 @@
 <h2 align="center"> COViTplusplus </h2>
 
-**Abstract.** This work implements One-shot Neural Architecture Search (NAS) to search the best configuration of Pyramid Vision Transformer (PVT) model for COVIDx8A dataset. Specifically, our objective is to find a model which should satisfy the resource constraints: a number of parameters, FLOPs (G) while also guaranteeing performance metrics: accuracy on test set and COVID-19 sensitivity. In order to tackle these challenges, we construct the large search space covering the changeable dimensions of Multi-head Attention vectors (*Q-K-V*); changeable pooling dimensions to perform Linear Spatial Reduction Attention; MLP ratios and amount of Transformer Encoders of each Stage. We initially train the supernet (the model can cover all scenarios from the search spacce) by Knowledge Distillation stragedy with the help of [Exp.5 teacher model](https://github.com/hoangtv2000/COViT#the-exp5-model). Benefitting the weight-entanglement training stragedy of Vision Transformers, the well-trained supernet can allow a thousand of its subnets to be well-trained without having to train from scratch. Our best subnet achieves % top-1 accuracy on COVIDx8A dataset, with M parameters and GFLOPs.
+**Abstract.** This work implements One-shot Neural Architecture Search (NAS) to search the best configuration of Pyramid Vision Transformer (PVT) model for COVIDx8A dataset. Specifically, our objective is to find a model which should satisfy the resource constraints: a number of parameters, FLOPs (G) while also guaranteeing performance metrics: accuracy on test set and COVID-19 sensitivity. In order to tackle these challenges, we construct the large search space covering the changeable dimensions of Multi-head Attention vectors (*Q-K-V*); changeable pooling dimensions to perform Linear Spatial Reduction Attention; MLP ratios and amount of Transformer Encoders of each Stage. We initially train the supernet (the model can cover all scenarios from the search spacce) by Knowledge Distillation stragedy with the help of [Exp.5 teacher model](https://github.com/hoangtv2000/COViT#the-exp5-model). Benefitting the **weight-entanglement training stragedy** of Vision Transformers, the well-trained supernet can allow a thousand of its subnets to be well-trained without having to train from scratch. Employing the **One-shot NAS searching technique**, our best subnet achieves % top-1 accuracy on COVIDx8A dataset, with M parameters and GFLOPs.
 
 ### 1. What is weight-entanglement?
 
+The central idea of weight-entanglement stragedy is to enable different transformer blocks to share weights for their common parts in each layer. In particular, the weight entanglement strategy enforces that different candidate blocks in the same layer to share as many weights as possible. Thus the training of any block will affect the weights of others for their intersected portion, as demonstrated in the figure below. During implementation, for each layer, we need to store only the weights of the largest block among the homogeneous candidates. The remaining smaller building blocks can directly extract weights from the largest one. Note that the proposed weight entanglement strategy is dedicated to work on homogeneous building blocks, such as self-attention modules. The convolutional blocks can not inherit this property, so we devide into 2 scenarios of MLP ratios, and training with individual 2 supernets.
+
 <p align="center">
-	<img src="(https://user-images.githubusercontent.com/58163069/156035826-1b3af29e-f1d2-4958-b8a9-68a7008357cc.png" alt="photo not available" width="75%" height="75%">
+	<img src="https://user-images.githubusercontent.com/58163069/156035904-c5871d70-8e47-4d93-b4f3-fa507ae3969c.png" alt="photo not available" width="65%" height="65%">
 	<br>
 	<em>Comparison between Classical weight sharing and Weight Entanglement</em>
 </p>
-
 
 ### 2. Super model base configuration
 
@@ -21,7 +22,7 @@
 | [32, 64, 160, 256] |                   | [2, 4, 8, 2]  |                   |
 |                    |                   | [3, 4, 12, 2] |                   |
 
-+ Params range: 3.1 - 9.1 M
++ Params range: 2.7 - 9.1 M
 + Flops range: 0.4 - 10.6 G 
 
 ### 3. Test accuracy, COVID-19 Sensitivity vs. Params, GFLOPs    
