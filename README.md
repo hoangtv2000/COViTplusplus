@@ -17,8 +17,8 @@
 
 ### Test accuracy, COVID-19 Sensitivity vs. Params, GFLOPs    
 <p align="center">
-	<img src="https://user-images.githubusercontent.com/58163069/155849018-24e637f0-5145-459b-9205-bf79b979e66e.png" alt="photo not available" width="80%" height="80%">
+	<img src="https://user-images.githubusercontent.com/58163069/156008529-6da5baa0-4ac2-430f-b6c3-24fe59fb1fc6.png" alt="photo not available" width="75%" height="75%">
 	<br>
-	<em>Top-1 accuracy and COVID-19 sensitivity on COVIDx8A dataset and top 1000 sampled high-performing architectures from the supernet with weight inherited from the supernet.</em>
+	<em>Top-1 accuracy and COVID-19 sensitivity on COVIDx8A dataset and top 100 sampled high-performing architectures from the supernet with weight inherited from the supernet.</em>
 </p>
 
