@@ -5,7 +5,7 @@
 ### 1. What is One-shot NAS?
 + A one-shot model (**supernet**) contains all possible architectures in subspace as submodels (**subnets**).
 + It allows the weights are shared between different architectures with common layers in supernet.
-+ We have to train the single one-shot model => search costs are reduced drastically.
++ We only have to train the single one-shot model => search costs are reduced drastically.
 
 ### 2. What is Weight-entanglement stragedy for One-shot NAS?
 
