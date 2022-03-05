@@ -39,3 +39,11 @@ The central idea of weight-entanglement stragedy is to enable different transfor
 
 ### 5. Future works 
 Despite creating a large search space including various configurations to find out the most compact and effective model for COVIDx8A dataset. We still hand-crafted study the scaling factor of Depthwise Separable Convolutional layers (MLP-ratios) according to the base configurations of PVT's original models by creating the two independent supernets. We continue to study the well-performing Convolutional blocks searching method, combining with the Weight Entanglement method to create a unique supernet.
+
+# Reference
+[1] W. Wang, E. Xie, X. Li, D.-P. Fan, K. Song, D. Liang, T. Lu, P. Luo, and L. Shao, “PVTv2: Improved
+Baselines with Pyramid Vision Transformer,” arXiv e-prints, p. arXiv:2106.13797, Jun. 2021.
+
+[2] Minghao Chen, Houwen Peng, Jianlong Fu, and Haibin Ling. Autoformer: Searching transformers for
+visual recognition. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV),
+2021.
