@@ -47,3 +47,5 @@ Baselines with Pyramid Vision Transformer,” arXiv e-prints, p. arXiv:2106.1379
 [2] Minghao Chen, Houwen Peng, Jianlong Fu, and Haibin Ling. Autoformer: Searching transformers for
 visual recognition. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV),
 2021.
+
+[3] https://github.com/microsoft/Cream
