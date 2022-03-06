@@ -37,6 +37,26 @@ The central idea of weight-entanglement stragedy is to enable different transfor
 	<em>Top-1 accuracy and COVID-19 sensitivity on COVIDx8A dataset and top 100 sampled high-performing architectures from the supernet with weight inherited from the supernet.</em>
 </p>
 
+#### 4.1 The most efficient model configuration
+
+|QKV Embed. dims     |  MLP ratios       | Depths        | Sample pool. dims |  Number of params  |  FLOPS             |
+| :----------------: | :---------------: | :-----------: | :---------------: |  :---------------: |  :---------------: |
+| [16, 32, 80, 128]  | [8, 8, 8, 4]      | [2, 2, 2, 2]  | 7                 | 3.16 M             | 0.29 G             |
+
+#### 4.2 Retrained model and Performance 
+![Click here](https://drive.google.com/file/d/18JERejTOmcCAUTjSZZzJmkKsb7Kpf6aW/view?usp=sharing) to download model.
+
+<div class="tg-wrap"><table class="tg">
+  <tr>
+    <td class="tg-7btt">Overall Acc. (%)</td>
+    <td class="tg-7btt">Macro Avg. F1 (%)</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">92.84</td>
+    <td class="tg-c3ow">92.05</td>
+  </tr>
+</table></div>
+
 ### 5. Future works 
 Despite creating a large search space including various configurations to find out the most compact and effective model for COVIDx8A dataset. We still hand-crafted study the scaling factor of Depthwise Separable Convolutional layers (MLP-ratios) according to the base configurations of PVT's original models by creating the two independent supernets. We continue to study the well-performing Convolutional blocks searching method, combining with the Weight Entanglement method to create a unique supernet.
 
