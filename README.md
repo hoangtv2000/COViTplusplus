@@ -55,7 +55,7 @@ The central idea of weight-entanglement stragedy is to enable different transfor
 
 
 ## 5. Future works 
-Despite creating a large search space including various configurations to find out the most compact and effective model for COVIDx8A dataset. We still hand-crafted study the scaling factor of Depthwise Separable Convolutional layers (MLP-ratios) according to the base configurations of PVT's original models by creating the two independent supernets. We continue to study the well-performing Convolutional blocks searching method, combining with the Weight Entanglement method to create a unique supernet.
+Despite creating a large search space including various configurations to find out the most compact and effective model for COVIDx8A dataset. We still hand-craftedly study the scaling factor of Depthwise Separable Convolutional layers (MLP-ratios) according to the base configurations of PVT's original models by creating the two independent supernets. We continue to study the well-performing Convolutional blocks searching method, combining with the Weight Entanglement method to create a unique supernet.
 
 ## Reference
 [1] W. Wang, E. Xie, X. Li, D.-P. Fan, K. Song, D. Liang, T. Lu, P. Luo, and L. Shao, “PVTv2: Improved
