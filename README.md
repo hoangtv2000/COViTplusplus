@@ -47,7 +47,7 @@ The central idea of weight-entanglement stragedy is to enable different transfor
 [Click here](https://drive.google.com/file/d/18JERejTOmcCAUTjSZZzJmkKsb7Kpf6aW/view?usp=sharing) to download retrained model weights.
 
 ### 4.3. Experimental results
-|Acc. (%)     |  Sens. (%)   				      ||| PPV (%)      				      ||| Macro Avg. F1 (%) |
+|Acc. (%)   	  |  Sens. (%)   				      ||| PPV (%)      				      ||| Macro Avg. F1 (%)   |
 | :-------------: | :---------------: | :-----------: | :-------------: |  :-------------: |  :-------: |  :----------: |  :----------------: |
 |  		  | Pneu. 	      |Norm. 	      |COVID-19		| Pneu.            |Norm. 	|COVID-19	|  	              |
 | 88.54           | 86.67 	      |86.0 	      |90.65		| 82.72 	   | 83.50 	| 94.17 	|  87.25              |
