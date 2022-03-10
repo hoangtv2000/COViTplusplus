@@ -32,7 +32,7 @@ The central idea of weight-entanglement stragedy is to enable different transfor
 
 ## 4. Test accuracy, COVID-19 Sensitivity vs. Params, GFLOPs    
 <p align="center">
-	<img src="https://user-images.githubusercontent.com/58163069/156008529-6da5baa0-4ac2-430f-b6c3-24fe59fb1fc6.png" alt="photo not available" width="75%" height="75%">
+	<img src="https://user-images.githubusercontent.com/58163069/157635148-ad14b4d6-9554-44fc-962d-889306ba3f0e.png" alt="photo not available" width="75%" height="75%">
 	<br>
 	<em>Top-1 accuracy and COVID-19 sensitivity on COVIDx8A dataset and top 100 sampled high-performing architectures from the supernet with weight inherited from the supernet.</em>
 </p>
@@ -44,12 +44,12 @@ The central idea of weight-entanglement stragedy is to enable different transfor
 | [16, 32, 80, 128]  | [8, 8, 8, 4]      | [2, 2, 2, 2]  | 7                 | 3.16 M             | 0.29 G             |
 
 ### 4.2. Retrained model weights
-[Click here](https://drive.google.com/file/d/18JERejTOmcCAUTjSZZzJmkKsb7Kpf6aW/view?usp=sharing) to download retrained model weights.
+[Click here](https://drive.google.com/file/d/18JERejTOmcCAUTjSZZzJmkKsb7Kpf6aW/view?usp=sharing) to download retrained model weights.COVID-19
+
 
 ### 4.3. Experimental results
-|Acc. (%)   	  |  Sens. (%)   				      ||| PPV (%)      				      ||| Macro Avg. F1 (%)   |
+|Acc. (%)   	  |  Sens. Pneu.      |Sens. Normal   |Sens. COVID-19   | PPV Pneu.        | PPV Norm.  | PPV COVID-19  | Macro Avg. F1 (%)   |
 | :-------------: | :---------------: | :-----------: | :-------------: |  :-------------: |  :-------: |  :----------: |  :----------------: |
-|  		  | Pneu. 	      |Norm. 	      |COVID-19		| Pneu.            |Norm. 	|COVID-19	|  	              |
 | 88.54           | 86.67 	      |86.0 	      |90.65		| 82.72 	   | 83.50 	| 94.17 	|  87.25              |
 
 
