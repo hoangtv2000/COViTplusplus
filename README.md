@@ -12,10 +12,11 @@
 The central idea of weight-entanglement stragedy is to enable different transformer blocks to share weights for their common parts in each layer. In particular, the weight entanglement strategy enforces that different candidate blocks in the same layer to share as many weights as possible. Thus the training of any block will affect the weights of others for their intersected portion, as demonstrated in the figure below. During implementation, for each layer, we need to store only the weights of the largest block among the homogeneous candidates. The remaining smaller building blocks can directly extract weights from the largest one. Note that the proposed weight entanglement strategy is dedicated to work on homogeneous building blocks, such as self-attention modules. The convolutional blocks can not inherit this property, so we devide into 2 scenarios of MLP ratios, and training with individual 2 supernets.
 
 <p align="center">
-	<img src="(https://user-images.githubusercontent.com/58163069/157635771-83838195-bbdc-4741-8191-1c1125fa18a3.png" alt="photo not available" width="65%" height="65%">
+	<img src="https://user-images.githubusercontent.com/58163069/157636260-10f84efd-0bd4-4319-b625-c1b6d96cd054.png" alt="photo not available" width="65%" height="65%">
 	<br>
 	<em>Comparison between Classical weight sharing and Weight Entanglement</em>
 </p>
+
 
 ## 3. Super model base configuration
 
@@ -32,10 +33,11 @@ The central idea of weight-entanglement stragedy is to enable different transfor
 
 ## 4. Test accuracy, COVID-19 Sensitivity vs. Params, GFLOPs    
 <p align="center">
-	<img src="" alt="photo not available" width="75%" height="75%">
+	<img src="https://user-images.githubusercontent.com/58163069/157635984-6bc97aee-4e6b-4a0d-88cc-a5186fd03f8e.png" alt="photo not available" width="75%" height="75%">
 	<br>
 	<em>Top-1 accuracy and COVID-19 sensitivity on COVIDx8A dataset and top 100 sampled high-performing architectures from the supernet with weight inherited from the supernet.</em>
 </p>
+
 
 ### 4.1. The most efficient model configuration
 
