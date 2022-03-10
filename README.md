@@ -8,11 +8,10 @@
 + We only have to train the single one-shot model => search costs are reduced drastically.
 
 ## 2. What is Weight-entanglement stragedy for One-shot NAS?
-
 The central idea of weight-entanglement stragedy is to enable different transformer blocks to share weights for their common parts in each layer. In particular, the weight entanglement strategy enforces that different candidate blocks in the same layer to share as many weights as possible. Thus the training of any block will affect the weights of others for their intersected portion, as demonstrated in the figure below. During implementation, for each layer, we need to store only the weights of the largest block among the homogeneous candidates. The remaining smaller building blocks can directly extract weights from the largest one. Note that the proposed weight entanglement strategy is dedicated to work on homogeneous building blocks, such as self-attention modules. The convolutional blocks can not inherit this property, so we devide into 2 scenarios of MLP ratios, and training with individual 2 supernets.
 
 <p align="center">
-	<img src="https://user-images.githubusercontent.com/58163069/156035904-c5871d70-8e47-4d93-b4f3-fa507ae3969c.png" alt="photo not available" width="65%" height="65%">
+	<img src="https://user-images.githubusercontent.com/58163069/157635658-ffd94c24-ed5b-4ae7-943e-d05dfc4d7a58.png" alt="photo not available" width="65%" height="65%">
 	<br>
 	<em>Comparison between Classical weight sharing and Weight Entanglement</em>
 </p>
@@ -32,7 +31,7 @@ The central idea of weight-entanglement stragedy is to enable different transfor
 
 ## 4. Test accuracy, COVID-19 Sensitivity vs. Params, GFLOPs    
 <p align="center">
-	<img src="https://user-images.githubusercontent.com/58163069/157635148-ad14b4d6-9554-44fc-962d-889306ba3f0e.png" alt="photo not available" width="75%" height="75%">
+	<img src="" alt="photo not available" width="75%" height="75%">
 	<br>
 	<em>Top-1 accuracy and COVID-19 sensitivity on COVIDx8A dataset and top 100 sampled high-performing architectures from the supernet with weight inherited from the supernet.</em>
 </p>
