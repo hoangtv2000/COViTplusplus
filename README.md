@@ -46,7 +46,7 @@ The central idea of weight-entanglement stragedy is to enable different transfor
 | [16, 32, 80, 128]  | [8, 8, 8, 4]      | [2, 2, 2, 2]  | 7                 | 3.16 M             | 0.29 G             |
 
 ### 4.2. Retrained model weights
-[Click here](https://drive.google.com/file/d/18JERejTOmcCAUTjSZZzJmkKsb7Kpf6aW/view?usp=sharing) to download retrained model weights.COVID-19
+[Click here](https://drive.google.com/file/d/18JERejTOmcCAUTjSZZzJmkKsb7Kpf6aW/view?usp=sharing) to download retrained model weights.
 
 
 ### 4.3. Experimental results
