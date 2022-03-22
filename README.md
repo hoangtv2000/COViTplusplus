@@ -9,7 +9,7 @@
 + 
 
 ## 2. What is Weight-entanglement stragedy for One-shot NAS?
-The central idea of weight-entanglement stragedy is to enable different transformer blocks to share weights for their common parts in each layer. In particular, the weight entanglement strategy enforces that different candidate blocks in the same layer to share as many weights as possible. Thus the training of any block will affect the weights of others for their intersected portion, as demonstrated in the figure below. During implementation, for each layer, we need to store only the weights of the largest block among the homogeneous candidates. The remaining smaller building blocks can directly extract weights from the largest one. Note that the proposed weight entanglement strategy is dedicated to work on homogeneous building blocks, such as self-attention modules. The depth-wise convolutional blocks can not inherit this property, so we devide into 2 scenarios of MLP ratios, and training with individual 2 supernets.
+The central idea of weight-entanglement stragedy is to enable different transformer blocks to share weights for their common parts in each layer. In particular, the weight entanglement strategy enforces that different candidate blocks in the same layer to share as many weights as possible. Thus the training of any block will affect the weights of others for their intersected portion, as demonstrated in the figure below. During implementation, for each layer, we need to store only the weights of the largest block among the homogeneous candidates. The remaining smaller building blocks can directly extract weights from the largest one. Note that the proposed weight entanglement strategy is dedicated to work on homogeneous building blocks, such as self-attention modules. The Depth-wise Convolutional blocks can not inherit this property, so we devide into 2 scenarios of MLP ratios, and training with individual 2 supernets.
 
 <p align="center">
 	<img src="https://user-images.githubusercontent.com/58163069/157636260-10f84efd-0bd4-4319-b625-c1b6d96cd054.png" alt="photo not available" width="65%" height="65%">
@@ -57,7 +57,7 @@ The central idea of weight-entanglement stragedy is to enable different transfor
 
 
 ## 5. Future works 
-Despite creating a large search space including various configurations to find out the most compact and effective model for COVIDx8A dataset. We still hand-craftedly study the scaling factor of Depthwise Separable Convolutional layers (MLP-ratios) according to the base configurations of PVT's original models by creating the two independent supernets. We continue to study the well-performing Convolutional blocks searching method, combining with the Weight Entanglement method to create a unique supernet.
+Despite creating a large search space including various configurations to find out the most compact and effective model for COVIDx8A dataset. We still hand-craftedly study the scaling factor of Depthwise Convolutional layers (MLP-ratios) according to the base configurations of PVT's original models by creating the two independent supernets. We continue to study the well-performing Convolutional layers searching method, combining with the Weight Entanglement method to create a unique supernet.
 
 ## Reference
 [1] W. Wang, E. Xie, X. Li, D.-P. Fan, K. Song, D. Liang, T. Lu, P. Luo, and L. Shao, “PVTv2: Improved
