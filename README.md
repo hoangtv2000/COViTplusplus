@@ -6,7 +6,7 @@
 + A one-shot model (**supernet**) contains all possible architectures in subspace as submodels (**subnets**).
 + It allows the weights are shared between different architectures with common layers in supernet.
 + We only have to train the single one-shot model => search costs are reduced drastically.
-+ 
+
 
 ## 2. What is Weight-entanglement stragedy for One-shot NAS?
 The central idea of weight-entanglement stragedy is to enable different transformer blocks to share weights for their common parts in each layer. In particular, the weight entanglement strategy enforces that different candidate blocks in the same layer to share as many weights as possible. Thus the training of any block will affect the weights of others for their intersected portion, as demonstrated in the figure below. During implementation, for each layer, we need to store only the weights of the largest block among the homogeneous candidates. The remaining smaller building blocks can directly extract weights from the largest one. Note that the proposed weight entanglement strategy is dedicated to work on homogeneous building blocks, such as self-attention modules. The Depth-wise Convolutional blocks can not inherit this property, so we devide into 2 scenarios of MLP ratios, and training with individual 2 supernets.
