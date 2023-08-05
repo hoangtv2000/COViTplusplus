@@ -32,7 +32,7 @@ The central idea of weight-entanglement stragedy is to enable different transfor
 + Flops range: 0.4 - 10.6 G
 + Number of available sub-model: 120 models
 
-## 4. Test accuracy, COVID-19 Sensitivity vs. Params, GFLOPs    
+## 4. Pareto frontier of Test Accuracy, COVID-19 Sensitivity vs. Params, GFLOPs    
 <p align="center">
 	<img src="https://user-images.githubusercontent.com/58163069/157635984-6bc97aee-4e6b-4a0d-88cc-a5186fd03f8e.png" alt="photo not available" width="75%" height="75%">
 	<br>
