@@ -18,7 +18,7 @@ The central idea of weight-entanglement stragedy is to enable different transfor
 </p>
 
 
-## 3. Super model base configuration
+## 3. Search-space configuration
 
 |QKV Embed. dims     |  MLP ratios       | Depths        | Sample pool. dims |
 | :----------------: | :---------------: | :-----------: | :---------------: |
@@ -29,7 +29,8 @@ The central idea of weight-entanglement stragedy is to enable different transfor
 |                    |                   | [3, 4, 12, 2] |                   |
 
 + Params range: 2.7 - 9.1 M
-+ Flops range: 0.4 - 10.6 G 
++ Flops range: 0.4 - 10.6 G
++ Number of available sub-model: 120 models
 
 ## 4. Test accuracy, COVID-19 Sensitivity vs. Params, GFLOPs    
 <p align="center">
